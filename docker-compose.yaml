@@ -7,3 +7,18 @@ services:
       - "5000:5000"
     volumes:
       - ./backend:/app
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: buddy123
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+
+

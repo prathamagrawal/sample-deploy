@@ -1,3 +1,6 @@
 arc/
 
 backend/__pycache__/
+frontend/package-lock.json
+
+db_data/
